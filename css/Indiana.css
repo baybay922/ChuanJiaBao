@@ -1,0 +1,62 @@
+body,html{width:100%;height:100%;position:relative}
+body{font-family:PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif}
+.w_wrapper{height:100%;height:100%;background:#f5f5f5;overflow:hidden}
+.w_header{width:100%;height:auto;border-bottom:1px solid #dfe5ea}
+.w_header ul{width:100%;height:auto;display:-webkit-box}
+.w_header ul li{width:25%;text-align:center;padding:1rem 0;color:#999;font-size:1.2rem;font-family:"microsoft yahei";}
+.w_header ul li.cur{color:#cd1b21;position:relative}
+.w_header ul li.cur:after{content:"";position:absolute;width:3rem;height:2px;background:#cd1b21;bottom:0;left:50%;margin-left:-1.5rem;}
+.w_substance{width:300%;height:100%;display:-webkit-box}
+.page{width:33.3%;height:auto;overflow-y:scroll}
+.page::-webkit-scrollbar{width:0;height:0;display:none}
+.page ul{padding-bottom:5rem}
+.page ul li{width:100%;height:auto;margin:0 auto;border-top:1rem solid #ebeef2;background:#fff;padding:1rem 0;}
+.page ul li h2{display:block;width:90%;font-weight:normal;font-size:1.4rem;margin:0 auto;padding:.8rem 0;color:#333}
+.page ul li dl{width:94%;height:auto;margin:0 auto}
+.page ul li dl dt{width:30%;height:auto;float:left;}
+.page ul li dl dt img{width:100%;height:100%}
+.page ul li dl dd{width:68%;float:right;color:#8b959c;font-size:1rem;position:relative;}
+.kjl_chuo{position:absolute;width:7rem;right:.5rem;}
+.page ul li dl dd p{color:#333;font-size:1rem;font-family:"microsoft yahei";}
+.page ul li dl dd p .numLeft{width:33.3%;float:left;display:block;font-size:1rem;line-height:25px;}
+.page ul li dl dd p .numLeft font{color:#d22527;}
+.page ul li dl dd p .numCenter{width:33.3%;float:left;display:block;font-size:1rem;line-height:25px;text-align:right;}
+.page ul li dl dd p .numCenter font{color:#999;}
+.page ul li dl dd p .numLeftK{width: 33.3%;float: left;display: block;font-size: 1rem;line-height: 25px;text-align:left;}
+.page ul li dl dd p .numLeftK font {color:#999;}
+.page ul li dl dd p .numCenterK{width: 33.3%;float: left;display: block;font-size: 1rem;line-height: 25px;text-align: right;}
+.page ul li dl dd p .numCenterK font{color:#999;}
+.page ul li dl dd p .numRight{width:33.3%;float:right;display:block;font-size:1rem;text-align:right;}
+.page ul li dl dd p .numRight button{padding:.4rem .8rem;background:#cf1717;color:#fff;border-radius:2px;font-family:"microsoft yahei";}
+.page ul li dl dd p .numRight_er{width:33.3%;float:right;display:block;font-size:1rem;text-align:right;}
+.page ul li dl dd p .numRight_er button{padding:.4rem .8rem;background:none;border:1px #cf1717 solid;color:#cf1717;border-radius:2px;font-family:"microsoft yahei";}
+.page ul li dl dd p .numRight_san{width:33.3%;float:right;display:block;font-size:1rem;text-align:right;}
+.page ul li dl dd p .numRight_san button{padding:.4rem .8rem;background:none;border:1px #999 solid;color:#999;border-radius:2px;font-family:"microsoft yahei";}
+.progressBox {width: 100%;height: .4rem;background: #ccc;margin:1rem auto;border-radius: 5px;}
+.progressBoxBar {width: 10%;height: 100%;background: #cd1b21;border-radius: 3px;position: relative;}
+.page ul li dl dd .bianhao{color:#999;margin-top:1rem;}
+.l_lastTips{width: 100%; height: 60px; line-height: 60px; font-size:1.4rem; color: #ccc; text-align:center; }
+.especially{color:#cd1b21}
+.Additional{color:#cd1b21!important;position:absolute;width:6rem;height:2rem;top:.2rem;right:0;text-align:center;line-height:2rem;border:1px solid #cd1b21;border-radius:3px}
+.unfortunately{position:relative}
+.unfortunately:after{content:"";width:6rem;height:6rem;background:url(../images/img/ykj_icon.png) no-repeat center center;background-size:cover;position:absolute;right:0;top:-3rem}
+.NOWinning{background:#e7e7e7;border:none;color:#9d9d9d!important;border:1px solid #e7e7e7}
+.w_nodata{width: 100%;height: 100%;}
+.w_imgBox{width: 30%;height: auto;margin: 0rem auto;padding-top: 12rem;}
+.w_imgBox img{width: 100%;height: 100%;}
+.w_nodata p{color: #969da3;text-align: center;margin-top: 2rem;font-size: 1.4rem;}
+.w_nodata a{width: 40%;height: 3rem;line-height: 3rem;color: #cf1819;border:1px solid #cf1819;border-radius: 5px;margin: 5rem auto;display: block;text-align: center;}
+@media (max-width:320px){
+	.page ul li dl dd .bianhao{margin-top:0px;}
+	.progressBox{margin:0px;}
+	.page ul li dl dd p .numLeft{width:50%;}
+	.page ul li dl dd p .numCenter{width:50%;}
+	.page ul li dl dd p .numRight{width:100%;}
+	.page ul li dl dd p .numRight button{width:100%;padding:.5rem 0;}
+	.page ul li dl dd p .numRight_er{width:100%;}
+	.page ul li dl dd p .numRight_er button{width:100%;padding:.4rem 0;}
+	.page ul li dl dd p .numLeftK{width:50%;}
+	.page ul li dl dd p .numCenterK{width:50%;}
+	.page ul li dl dd p .numRight_san{width:100%;}
+	.page ul li dl dd p .numRight_san button{width:100%;padding:.4rem 0;}
+}

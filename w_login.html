@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />    
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>登录</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/w_login.css">
+</head>
+<body>
+	<section class="w_wrapper">
+		<section class="w_logo">
+			<img src="./images/img/Login_Logo.png" alt="">
+		</section>
+		<section class="w_formBox">
+			<form action="" class="logon" id="logon" name="logon">
+				<div class="w_inputBox w_userBox" id="w_userBox">
+					<span class="w_Icon"><img src="./images/img/Login_Icon_01.png" alt=""></span>
+					<input type="number" class="limitNUM11" placeholder="请输入手机号" >
+					<span class="w_close" style="position: absolute;right: 4rem;top: 50%;margin-top: -.7rem;"><img src="./images/img/1A_Icon_03.png" alt=""></span>
+				</div>
+				<div class="w_promptBox">
+					<p class="prompt" id="prompt">手机格式错误</p>
+				</div>
+				<div class="w_inputBox">
+					<span class="w_Icon"><img src="./images/img/Login_Icon_02.png" alt=""></span>
+					<input type="password" class="pwd" id="pwd" placeholder="请输入密码" >
+					<span class="w_close" style="position: absolute;right: 4rem;top: 50%;margin-top: -.7rem;"><img src="./images/img/1A_Icon_03.png" alt=""></span>
+					<span class="w_reveal" id="w_reveal"></span>
+				</div>
+				
+				<div class="w_promptBox" style="display:-webkit-box;position:relative;">
+					<p class="prompt" id="Testpwd">手机格式错误</p><div class="w_forget" style="position:absolute;bottom:-.5rem;right:0;"><a href="">忘记密码</a></div>
+				</div>
+				<div class="w_SignIn">
+					登录
+				</div>
+				<div class="w_register">
+					免费注册
+				</div>		
+			</form>			
+		</section>
+		<div class="inner" style="display: none;">
+			<div class="load-container load4">
+				<div class="loader">Loading...</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/public/jquery-1.11.0.min.js"></script>
+	<script src="js/public/public.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>

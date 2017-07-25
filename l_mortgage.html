@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/mortgage.css" type="text/css">
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<title>分期支付</title>
+</head>
+<body class="l_NewScroll" style="position:absolute; overflow-y:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0" >
+<header> 请选择银行卡 </header>
+<section>
+	<ul class="l_bankBTN">
+		<li class="l_noMargin" id="Bank_CCB" data-BankName="建设银行"></li>
+		<li id="Bank_CMB" data-BankName="招商银行" class="l_bankCheck"></li>
+		<li id="Bank_ICBC" data-BankName="工商银行"></li>
+	</ul>
+	<ul class="l_mortgageList l_mortgageList1" id="list1">
+		<li class="l_checked">6期，每期金额约为RMB 548元，总计约RMB 8,548元（银行收取0%手续费）</li>
+		<li>9期，每期金额约为RMB 548元，总计约RMB 8,548元（银行收取0%手续费）</li>
+		<li>12期，每期金额约为RMB 548元，总计约RMB 8,548元（银行收取0%手续费）</li>
+	</ul>
+	<ul class="l_bankBTN">
+		<li class="l_noMargin" id="Bank_CMBC" data-BankName="民生银行"></li>
+		<li id="Bank_BC" data-BankName="中国银行"></li>
+		<li id="Bank_ABC" data-BankName="农业银行"></li>
+	</ul>
+	<ul class="l_mortgageList l_mortgageList2 l_hide" id="list2">
+		<li class="l_checked">6期，每期金额约为RMB 548元，总计约RMB 8,548元（银行收取0%手续费）</li>
+		<li>9期，每期金额约为RMB 548元，总计约RMB 8,548元（银行收取0%手续费）</li>
+		<li>12期，每期金额约为RMB 548元，总计约RMB 8,548元（银行收取0%手续费）</li>
+	</ul>
+</section>
+<p class="L_mortgageTip">分期付款说明<span>使用信用卡分期支付你的订单，此处显示每期还款金额是根据你的订单估算得出的整数金额，未显示小数点以后的金额(即角单位和分单位的金额)，银行有权决定是否接受您的分期付款申请，实际支付数额请以银行账单为准。</span></p>
+<button id="next">确认分期</button>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/mortgage.js" type="text/javascript"></script>
+</body>
+</html>
+

@@ -1,0 +1,167 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*input中placeholder颜色*/
+input::-webkit-input-placeholder { color: #d6d6d6;text-indent: 3.5rem; } /* WebKit browsers */
+input:-moz-placeholder { color: #d6d6d6;text-indent: 3.5rem; } /* Mozilla Firefox 4 to 18 */ 
+input::-moz-placeholder {  color: #d6d6d6;text-indent: 3.5rem; } /* Mozilla Firefox 19+ */
+input:-ms-input-placeholder { color: #d6d6d6;text-indent: 3.5rem; }/* Internet Explorer 10+ */ 
+body{
+	background: url(../images/Login_Img_01.png) bottom no-repeat;
+	background-size: cover;
+}
+header{
+	width: 100%;
+	height: 27%;
+	background: url(../images/Login_Logo.png) center no-repeat;
+	background-size: 18%;
+}
+section{
+	width: 100%;
+	height: 73%;
+	position: relative;
+}
+section input{
+	background: transparent;
+	color: #fff;
+	width: 86%;
+	margin-left: 7%;
+	height: 2rem;
+	padding:0.5rem 0;
+	line-height: 2rem;
+	font-size: 1.2rem;
+	border:none;
+	border-bottom: solid 1px rgba(255,255,255,0.8);
+	text-indent: 3.5rem;
+	z-index: 10;
+}
+.l_deleteB{
+	top: -webkit-calc(50% - 0.6rem);
+	top: -moz-calc(50% - 0.6rem);
+	top: -o-calc(50% - 0.6rem);
+	top: -ms-calc(50% - 0.6rem);
+	top: calc(50% - 0.6rem);
+	right: 11%;
+}
+.l_passWDel{
+	right: 18%;
+}
+section input+b{
+	position: absolute;
+	bottom: 0;
+	left: -webkit-calc(5% + 4rem);
+	left: -moz-calc(5% + 4rem);
+	left: -o-calc(5% + 4rem);
+	left: -ms-calc(5% + 4rem);
+	left: calc(5% + 4rem);
+	color: #cf1919;
+	font-size: 0.8rem;
+	line-height: 2rem;
+	opacity: 0;
+/*	-webkit-transition:all .2s ease;
+	-moz-transition:all .2s ease;
+	-o-transition:all .2s ease;
+	-ms-transition:all .2s ease;
+	transition:all .2s ease;*/
+}
+.l_userIdBox,.l_pswBox{
+	position: relative;
+}
+.l_pswBox{
+	margin-top: 2.5rem;
+}
+.l_userIdBox::before,.l_pswBox::before{
+	content: "";
+	display: block;
+	width: 1.8rem;
+	height: 1.8rem;
+	position: absolute;
+	left: -webkit-calc(3% + 2rem);
+	left: -moz-calc(3% + 2rem);
+	left: -o-calc(3% + 2rem);
+	left: -ms-calc(3% + 2rem);
+	left: calc(3% + 2rem);
+	top:0.7rem;
+	background: url(../images/Login_Icon_01.png) center no-repeat;
+	background-size: contain;
+}
+.l_pswBox::before{
+	background: url(../images/Login_Icon_02.png) center no-repeat;
+	background-size: contain;
+}
+.l_pswBtn{
+	width: 3rem;
+	height: 3rem;
+	background: url(../images/Login_Icon_03.png) center no-repeat;
+	background-size: 1.4rem;
+	position: absolute;
+	top: -webkit-calc(50% - 1.5rem);
+	top: -moz-calc(50% - 1.5rem);
+	top: -o-calc(50% - 1.5rem);
+	top: -ms-calc(50% - 1.5rem);
+	top: calc(50% - 1.5rem);
+	right: 8%;
+}
+.l_pswBtn2{
+	background: url(../images/Login_Icon_04.png) center no-repeat;
+	background-size: 1.4rem;
+}
+.l_ForgetPSW{
+	width: 6rem;
+	font-size: 1rem;
+	color: #a0a0a0;
+	text-align: right;
+	float: right;
+	margin-top: 1rem;
+	margin-right: 10%;
+}
+button{
+	position: absolute;
+	top: 46%;
+	margin-top: -1.5rem;
+	letter-spacing: 1rem;
+	text-indent: 1rem;
+}
+button+p{
+	width: 5.6rem;
+	text-align: center;
+	margin-left: -webkit-calc(50% - 2.8rem);
+	margin-left: -moz-calc(50% - 2.8rem);
+	margin-left: -o-calc(50% - 2.8rem);
+	margin-left: -ms-calc(50% - 2.8rem);
+	margin-left: calc(50% - 2.8rem);
+	font-size: 1.2rem;
+	line-height: 2rem;
+	color: #fff;
+	opacity: 0.7;
+	position: absolute;
+	top: 60%;
+}
+.l_errrShow{
+	-webkit-animation: errrShow .3s linear ;
+	-moz-animation: errrShow .3s linear ;
+	-o-animation: errrShow .3s linear ;
+	-ms-animation: errrShow .3s linear ;
+	animation: errrShow .3s linear ;
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-ms-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+}
+@-webkit-keyframes errrShow{
+	0%{
+		bottom: 0;
+	}
+	40%{
+		bottom: -2.5rem;
+		opacity: 1;
+	}
+	80%{
+		bottom: -2rem;
+		opacity: 0.8;
+	}
+	100%{
+		bottom: -2.5rem;
+		opacity: 1;
+	}
+}

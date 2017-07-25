@@ -1,0 +1,171 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+body{
+	 font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
+}
+
+.w_wrapper{
+	height: 100%;
+	background: #ebeef2;
+}
+.w_material{
+	height: auto;
+	border-top: 10px solid #ebeef2;
+	background: #fff;
+}
+.w_material li{
+	border-bottom: 1px solid #ebeef2;
+	padding:1rem 0;
+	display: -webkit-box;
+	font-size: 1.2rem;
+}
+.w_material li span{
+	width: 25%;
+	display: block;
+	text-indent: 1.5rem;
+	color: #707375;
+}
+.w_material li span:nth-child(2){
+	width: 65%;
+	text-align: right;	
+	position: relative;
+}
+.w_material li span:nth-child(2):after{
+	content: "";
+	width: 1.3rem;
+	height: 1.3rem;
+	background: url(../images/img/right_btn.png) no-repeat ;
+	background-size:contain;
+	position: absolute;
+	right: -2rem;
+	top: 0;
+}
+.w_material li input{
+	width: 90%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 1.2rem;
+	color: #c1cad1;
+}
+.w_material li:last-child{
+	border-top: 10px solid #ebeef2;
+	display: -webkit-box;
+}
+.w_material li:last-child label{
+	width: 95%;
+	display: block;
+	margin: 0 auto;
+	color: #707375;
+	background: url(../images/img/nochecked.png) no-repeat 94% center;
+	background-size: contain;
+}
+#checked:checked + label{
+	background: url(../images/img/checked.png) no-repeat 94% center;
+	background-size: contain;
+}
+.textBox{
+	width: 70%!important;
+	height: 8rem!important;
+	margin-left: .5rem;
+}
+.textBox textarea{
+	width: 100%!important;
+	height: 100%;
+	border: none;
+	outline: none;
+	color: #c1cad1;
+	font-size: 1.2rem;
+}
+.preservation{
+	width: 90%;
+	padding: 1rem 0;
+	margin: 3rem auto;
+	background: #cf1919;
+	text-align: center;
+	color: #fff!important;
+	display: block;
+	border-radius: 3px;
+	font-size: 1.2rem;
+}
+.innerBox{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	display: none;
+}
+.MenuSelection{
+	width: 100%;
+	height: 60%;
+	background: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.MenuSelection h2{
+	width: 100%;
+	padding: .8rem 0;
+	text-align: center;
+	font-weight: normal;
+	font-size: 1.2rem;
+	border-bottom: 1px solid #dfe5ea;
+	position: relative;
+	color: #333;
+}
+.MenuSelection h2 span{
+	text-align: right;
+	position: absolute;
+	right: 1rem;
+	top:.8rem;
+	color: #333;
+}
+.Selected{
+	padding: .8rem 0;
+	border-bottom: 1px solid #dfe5ea;
+	text-indent: 2rem;
+	color: #cf1919;
+	font-size: 1.2rem;
+}
+.Selected span{
+	font-size: 1.2rem;
+}
+.cityBox{
+	height: 80%;
+}
+.listing{
+	height: 100%;
+	overflow-y: scroll; 
+}
+.listing::-webkit-scrollbar {
+        display: none;
+    }
+.listing li{
+	padding: .8rem 0;
+	border-bottom: 1px solid #dfe5ea;
+	text-indent: 2rem;
+	color: #333;
+}
+.listing li.cur{
+	background: url(../images/img/selected.png) no-repeat 95.5% center;
+	background-size: 20px 12px;
+}
+.ErrPrompBox{
+	width: 50%;
+	height: 3rem;	
+	margin: 2rem auto;
+}
+.ErrPrompt{
+	text-align: center;
+	line-height: 3rem;
+	border-radius: 20px;
+	background:#8d8f91;
+	color: #fff;
+	display: none;
+}

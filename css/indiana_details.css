@@ -1,0 +1,71 @@
+﻿@charset "utf-8";
+.con_bg{background:#EBEEF2;}
+.indiana_Title{padding:.8rem 1.5rem .5rem;background:#fff;}
+.indiana_Title_le{float:left;}
+.indiana_Title_le img{width:1rem;}
+.indiana_Title_ri{float:right;}
+.indiana_Title_ri img{width:2.3rem;}
+
+.indiana_Main{width:100%;background:url(../images/duobao/box_bj.png) no-repeat;background-size:cover;}
+.indiana_main_box1{width:100%;text-align:center;padding:2rem 0 .8rem 0;}
+.indiana_main_box1 img{width:12rem;}
+.indiana_main_box2{width:100%;text-align:center;font-size:1.6rem;color:#333;margin-bottom:1rem;}
+.indiana_main_box3{width:80%;margin:0 auto;text-align:center;color:#fff;padding:.6rem 1rem;font-size:1.4rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    border-radius: .3rem;
+	background-color:#BCA88A;
+	background-color:rgba(0,0,0,0.2);}
+.indiana_main_box4{width:100%;text-align:center;}
+.indiana_main_box4 a img{width:10rem;margin:2rem 0;}
+.indiana_Num{width:100%;height:auto;text-align:center;background:#DABD91;padding:.4rem 0;position:relative;}
+.indiana_Num .kjl_pic{position:absolute;top:-4.5rem;right:1rem;}
+.indiana_Num .kjl_pic img{width:9rem;}
+.indiana_Num .indiana_Num_p1{font-size:1.2rem;color:#333;padding:1rem 0;}
+.indiana_Num .indiana_Num_p2{font-size:1.6rem;color:#CF1717;}
+.indiana_Num .indiana_Num_p3{font-size:1.2rem;color:#333;padding:1rem 0;}
+.indiana_Num .indiana_Num_p3 i{color:#CF1717;}
+
+section{background:#fff;padding-bottom:2rem;}
+.record_Title{padding:0 1.5rem;text-align:center;font-size:1.3rem;}
+.record_Title p{border-bottom:1px #eee solid;line-height:5rem;}
+.record_Title p i{color:#CF1717;}
+.record_Time{padding:0 2.5rem;line-height:5rem;}
+.record_Time .record_Time_le{float:left;color:#8B959C;font-size:1.2rem;}
+.record_Time .record_Time_ri{float:right;color:#8B959C;font-size:1.2rem;}
+.record_Num{width:100%;}
+.record_Num .record_Num_ul{padding:0 1.5rem;}
+.record_Num .record_Num_ul li{width:100%;float:left;}
+.record_Num .record_Num_ul li ul li{width:24%;margin:1% 0.5%;text-align:center;border-radius:5px;padding:.3rem 0;float:left;background:#F2F2F2;font-size:1.4rem;}
+.record_Num .record_Num_ul li ul li:last-child{margin-right:none;margin-left:none;}
+.record_Line_pic{width:100%;}
+.record_Line_pic img{width:100%;margin:2rem 0 0;}
+.record_Line_pic2{width:100%;}
+.record_Line_pic2 img{width:100%;padding:0 0 3rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

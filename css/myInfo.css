@@ -1,0 +1,147 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{
+	background:#ebeef2;
+}
+section{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: 3rem;
+}
+.myInfo{
+	width: 100%
+	height:auto;
+}
+.myInfo li{
+	width: 90%;
+	border-bottom:solid 1px #dfe5ea; 
+	background:#fff;
+	height: 4rem;
+	text-align: right;
+	font-size: 1.2rem;
+	line-height: 4rem;
+	position: relative;
+	padding-right: 10%;
+	color: #8b959c;
+}
+.myInfo input{
+	width: 15rem;
+	height: 1.6rem;
+	padding: 1.1rem 0;
+	border: none;
+	text-align: right;
+	margin-right: -6%;
+	font-size: 1.6rem;
+	line-height: 1.6rem
+}
+.l_tips{
+	width: 100%;
+	height: 0;
+	font-size: 1rem;
+	line-height: 2rem;
+	color: #afafaf;
+	text-align: center;
+	opacity: 0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	transition: all .4s ease;
+}
+.tipsShow{
+	height: 2rem;
+	opacity: 1;
+}
+.myInfo li::before{
+	position: absolute;
+	left: 5%;
+	top: 0;
+	line-height: 4rem;
+	font-size: 1.4rem;
+	color: #707375;
+}
+.myInfo li:nth-child(1)::before{
+	content: "用户名";
+}
+.myInfo li:nth-child(3)::before{
+	content: "性别";
+}
+.myInfo li:nth-child(3)::after,.myInfo li:nth-child(4)::after,.myInfo li:nth-child(5)::after{
+	content: "";
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	border-top:solid 1px #c9d2d8; 
+	border-right:solid 1px #c9d2d8; 
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 50%;
+	right: 5%;
+	margin-top: -0.6rem; 
+}
+.myInfo li:nth-child(4)::before{
+	content: "会员等级";
+}
+.myInfo li:nth-child(5)::before{
+	content: "账户安全";
+}
+.myInfo li:nth-child(5){
+	margin-top: 0.5rem;
+}
+.l_exit{
+	width: 90%;
+	height: 4rem;
+	background:#cf1919;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 1.6rem;
+	position: absolute;
+	bottom: 30%;
+	left: 5%;
+}
+.ButtonForAndroid{
+	position: relative;
+	margin-top:4rem; 
+}
+.l_choiceSex{
+	background: #fff;
+	width: 80%;
+	height: auto;
+	padding:0.5rem 0;
+	border-radius: 6px; 
+	color: #5a636d;
+	font-size: 1rem;
+	text-align:center;
+	line-height: 2rem;
+	position: fixed;
+	top: 40%;
+	left: 10%;
+	margin-top: -5rem;
+	z-index: 999;
+}
+.l_choiceSex button{
+	width: 100%;
+	height: 3.5rem;
+	font-size: 1.4rem;
+	color: #5a636d;
+	border-top:solid 1px #dfe5ea; 
+	background:transparent; ;
+
+}
+.l_mask{
+	display: none;
+}
+.transparent{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left:0;
+	z-index:99999;
+	background-color: transparent;
+	display: none;
+}

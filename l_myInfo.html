@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/myInfo.css" type="text/css">
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<title>我</title>
+</head>
+<body class="l_NewScroll" style="position:absolute; overflow-y:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0">
+<section>
+	<ul class="myInfo">
+		<li><input type="text" readonly="readonly" maxlength="16" data-userID="yjy186xxxx2862" placeholder="yjy186xxxx2862" id="userId" ></li><!-- onfocus="$('.transparent').show();$(this).attr('placeholder','').removeClass('l_RedLine');$('.l_exit').addClass('ButtonForAndroid');$('.l_tips').addClass('tipsShow');" onblur="$('.transparent').hide();$('.l_tips').removeClass('tipsShow');$('.l_exit').removeClass('ButtonForAndroid');checkUName($(this).val())" -->
+		<p class="l_tips">用户名将由4-16个英文+数字组成</p>
+		<li class="l_sex">男</li>
+		<li onclick="alert('跳转至会员等级页面')"></li>
+		<li onclick="location.href='ChangePassWord.html'";>修改密码</li>
+	</ul>
+	<p class="errrTipToast"></p>
+	<button class="l_exit" onclick="alert('跳转至退出后的页面')">退出当前账号</button>
+</section>
+<div class="inner" style="display: none;">
+	<div class="load-container load4">
+		<div class="loader">Loading...</div>
+	</div>
+</div>
+<div class="l_mask">
+	<p class="l_choiceSex">请选择性别
+		<button value="男">男</button>
+		<button value="女">女</button>
+	</p>
+</div>
+<p class="transparent"></p>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/myInfo.js" type="text/javascript"></script>
+</body>
+</html>
+

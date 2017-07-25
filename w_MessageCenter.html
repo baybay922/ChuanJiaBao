@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />    
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>系统消息</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/MessageCenter.css">
+</head>
+<body>
+	<section class="w_wrapper">
+     <section class="list">
+       <ul class="list-ul">
+         <li id="li" class="list-li">
+           <div class="con">
+             <dl class="SystemMessage">
+                <dd><img src="images/img/info_icon_01.png" alt=""><span>2</span></dd>
+                <dt>
+                   <h2><span>系统消息</span><span>13:45</span></h2>
+                   <p>您的订单20160519已经发货了，感谢您的惠顾和光临</p>
+                </dt>
+              </dl>
+           </div>
+           <div class="btn" ontouchend="removeParent($(this))">删除</div>
+         </li>
+       </ul>
+       <ul class="list-ul">
+         <li id="li" class="list-li">
+           <div class="con">
+             <dl class="SystemMessage">
+                <dd><img src="images/img/icon_info_02.png" alt=""><span>2</span></dd>
+                <dt>
+                   <h2><span>优惠信息</span><span>13:45</span></h2>
+                   <p>疯狂666，翡翠大降价。全场翡翠最低至3折，还有更多惊喜哦</p>
+                </dt>
+              </dl>
+           </div>
+           <div class="btn" ontouchend="removeParent($(this))">删除</div>
+         </li>
+       </ul>
+     </section>
+	</section>
+	<script src="js/public/Zepto1.1.4.min.js"></script>
+  <script src="js/zepto.touchWipe.js"></script>
+	<script src="js/public/public.js"></script>
+	<script>
+      $('.list-li').touchWipe({itemDelete: '.btn'}); 
+      function removeParent($this){
+        $this.closest("ul").remove()
+      }       
+	</script>
+</body>
+</html>

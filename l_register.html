@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/register.css" type="text/css">
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<title>注册</title>
+</head>
+<body class="l_NewScroll" style="position:absolute; overflow-y:scroll; -webkit-overflow-scrolling:  touch; top:0; left:0; bottom:0; right:0">
+<header></header>
+<section>
+	<div class="l_userIdBox">
+		<i class="l_deleteB"></i>
+		<input name="input" class="l_userId limitNUM11" id="userID" placeholder="请输入手机号" type="tel" maxlength="11" oninput="limitNUM(11);$(this).val()!=''?$(this).siblings('.l_deleteB').show():$(this).siblings('.l_deleteB').hide();" onfocus="$(this).attr('placeholder','').removeClass('l_RedLine');$('#userID + b').removeClass('l_errrShow').css('width',0);$(this).val()!=''?$(this).siblings('.l_deleteB').show():$(this).siblings('.l_deleteB').hide();" onblur="$(this).attr('placeholder','请输入手机号');checkUserID($(this).val());$(this).siblings('.l_deleteB').hide();">
+		<b></b>
+		<button class="l_codeBTN">获取验证码</button>
+	</div>
+	<div class="l_pswBox l_codeBox">
+		<i class="l_deleteB l_CodeDel"></i>
+		<input name="input" class="l_PassW" type="tel"  maxlength="6" id="code" placeholder="请输入验证码" onfocus="$('#code').attr('placeholder','').removeClass('l_RedLine');$('#code + b').removeClass('l_errrShow').css('width',0);$(this).val()!=''?$(this).siblings('.l_deleteB').show():$(this).siblings('.l_deleteB').hide();" oninput="$(this).val()!=''?$(this).siblings('.l_deleteB').show():$(this).siblings('.l_deleteB').hide();" onblur="$('#code').attr('placeholder','请输入验证码');$(this).siblings('.l_deleteB').hide();checkCodeWord($(this).val());">
+		<b></b>
+	</div>
+	<div class="l_pswBox">
+		<i class="l_deleteB l_passWDel"></i>
+		<input name="input" class="l_PassW" type="password" id="PassW" placeholder="请输入密码" onfocus="$('#PassW').attr('placeholder','').removeClass('l_RedLine');$('#PassW + b').removeClass('l_errrShow').css('width',0);$(this).val()!=''?$(this).siblings('.l_deleteB').show():$(this).siblings('.l_deleteB').hide();" oninput="$(this).val()!=''?$(this).siblings('.l_deleteB').show():$(this).siblings('.l_deleteB').hide();" onblur="$('#PassW').attr('placeholder','请输入密码');$(this).siblings('.l_deleteB').hide();checkPassWord($(this).val());">
+		<b></b>
+		<p class="l_pswBtn"></p>
+	</div>
+	<p class="l_registCheck">同意传佳宝用户</p><i class="clearfix">注册协议</i>
+	<p class="errrTipToast"></p>
+	<button class="RedBTN" id="load" onclick="load()">注册</button>
+</section>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/register.js" type="text/javascript"></script>
+</body>
+</html>
+

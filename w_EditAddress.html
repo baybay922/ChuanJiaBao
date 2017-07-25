@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />    
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>编辑地址</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/EditAddress.css">
+</head>
+<body>
+	<section class="w_wrapper">
+		<ul class="w_material">
+			<li>
+				<span>收货人</span><input type="text" class="user" placeholder="请填写收货人姓名" onblur="OutFocus($(this).val());">
+			</li>
+			<li>
+				<span>联系电话</span><input type="number" class="phone limitNUM11" placeholder="配送人员联系您的电话" oninput="limitNUM(11);" onblur="provingPhone($(this).val())">
+			</li>
+			<li>
+				<span>邮政编码</span><input type="number" class="ZipCode limitNUM6" placeholder="请输入邮政编码" oninput="limitNUM(6);" onblur="ZipCode($(this).val());">
+			</li>
+			<li>
+				<span>所在地区</span><span class="PleaseSel">请选择</span>
+			</li>
+			<li>
+				<span>详细地址</span><div class="textBox"><textarea name="tarea" id="tarea" class="tarea" placeholder="请输入详细收货地址" onblur="testText($(this).val());"></textarea></div>
+			</li>
+			<li>
+				<input type="checkbox" id="checked" checked="checked"><label for="checked" class="checked">设为默认地址</label>
+			</li>
+		</ul>
+		<div class="ErrPrompBox">
+			<p class="ErrPrompt">错误</p>
+		</div>
+		<a href="#" class="preservation">保存</a>
+		<div class="innerBox">
+			<div class="MenuSelection">
+				<h2>所在城市<span class="close">关闭</span></h2>
+				<div class="Selected"><span class="city">请选择</span><span class="area"></span><span class="country"></span></div>
+				<div class="cityBox">
+					<ul class="citylisting listing" id="citylisting">
+						
+					</ul>
+					<ul class="areaListing listing" id="areaListing">
+						
+					</ul>
+					<ul class="countryListing listing" id="countryListing">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/public/jquery-1.11.0.min.js"></script>
+	<script src="js/public/public.js"></script>
+	<script>
+		$(".PleaseSel").on("click",function(){/*  选择省列表  */
+			$(".innerBox").show();
+			$.ajax({
+				url:"data/city.json",
+				type : "get",
+				dataType:"json",
+				success : function(data) {
+					var html="";
+					$.each(data,function(key,val){
+						html+='<li dataType="'+val.value+'">'+val.name+'</li>';
+					})
+					$("#citylisting").append(html)
+				}
+			})
+		})
+		$(".citylisting").on("click","li",function(){/*  选择市区列表  */
+			var curHTML = $(this).html();
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".city").html(curHTML+'  >  ')	
+			$(".area").html("请选择");
+			alert($(this).attr("dataType"))	
+			$.ajax({
+				url:"data/CITY1.json",
+				type : "get",
+				dataType:"json",
+				success : function(data) {
+					var html2="";
+					$.each(data,function(key,val){
+						html2+='<li dataType="'+val.value+'">'+val.name+'</li>';
+					})
+					$(".areaListing").append(html2);
+
+				}
+			})
+			$(this).parent("ul").hide();
+		})
+		$(".areaListing").on("click","li",function(){/*  选择乡县列表  */
+			var curHTML = $(this).html();
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".area").html(curHTML+'  >  ');
+			$(".country").html("请选择")
+			alert($(this).attr("dataType"))
+			$.ajax({
+				url:"data/CITY3.json",
+				type:"get",
+				dataType:"json",
+				success:function(data){
+					var html = "";
+					$.each(data,function(key,val){
+						html+='<li dataType="'+val.value+'">'+val.name+'</li>'
+					})
+					$(".countryListing").html(html)
+				}
+			})
+			$(this).parent("ul").hide();
+		})
+		$(".countryListing").on("click","li",function(){
+			var curHTML = $(this).html();
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".country").html(curHTML);
+			$(".innerBox").hide();
+			$(".PleaseSel").html($(".city").html()+$(".area").html()+curHTML);
+			alert($(this).attr("dataType"))
+		})
+
+		var page = $(".cityBox").find("ul");
+		$(".Selected").on("click","span",function(){
+			var ind = $(this).index();
+			page.eq(ind).show().siblings().hide();
+			$(this).nextAll().html("")
+		})
+
+		$(".close").on("click",function(){
+			$(".innerBox").hide();
+		})		
+
+		function OutFocus(val){
+			if(val==""){
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("收货人不能为空")
+			}
+		}
+		function provingPhone(val){
+			if(val==""){
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("手机号不能为空")
+			}else if(!(/^1[3|4|5|8|7][0-9]\d{4,8}$/.test(val))){//
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("手机号格式错误")
+			}else if(val.length<11){//
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("不是完整的11位手机号")
+			}
+		}
+		function ZipCode(val){
+			if(val==""){
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("邮政编码不能为空")
+			}else if(!(/^[a-zA-Z0-9]{6}$/.test(val))){//
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("邮政编码格式不正确")
+			}
+		}
+		function testText(val){
+			if(val==""){
+				$(".ErrPrompt").show(1,function(){
+					setTimeout(function(){
+						$(".ErrPrompt").hide()
+					},3000)
+				}).html("详细地址不能为空")
+			}
+		}
+		function limitNUM(n){
+		    var leg = $(".limitNUM"+n).val().length;
+		    if (leg > n) {
+				$(".limitNUM"+n).val($(".limitNUM"+n).val().substring(0,n));
+		    }
+		}
+		$(".preservation").on("click",function(){
+			var nameVal = $(".user").val(),	
+				phoneVal = $(".phone").val(),
+				ZipCodeVal = $(".ZipCode").val(),
+				tareaVal = $(".tarea").val();
+
+			OutFocus(nameVal);
+			provingPhone(phoneVal);
+			ZipCode(ZipCodeVal);
+			testText(tareaVal);
+		})
+	</script>
+</body>
+</html>

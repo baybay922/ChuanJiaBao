@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />    
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>注册成功</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/w_login.css">
+	<link rel="stylesheet" href="css/EnrollSuccess.css">
+</head>
+<body>
+	<section class="w_wrapper">
+		<div class="w_tallyBox">
+			<div class="w_tally">
+				<img src="./images/img/tally_icon.png" alt="">
+			</div>			
+			恭喜您！已注册成功
+		</div>
+		<form action="">
+			<div class="w_inputBox w_userBox w_modifyBox" id="w_userBox">
+				<span class="w_Icon w_modify">修改用户名</span>
+				<input type="text" maxlength="20" class="modify" value="au7ava8b5" id="modify">
+				<span class="w_close" style="position: absolute;right: 4rem;top: 50%;margin-top: -.7rem;"><img src="./images/img/1A_Icon_03.png" alt=""></span>
+			</div>
+			<div class="w_promptBox">
+				<p class="confirm" id="confirm"></p>
+			</div>
+			<div class="w_rule">
+				用户名将由4-20个英文+数字组成
+			</div>
+			<div class="w_SignIn w_complete" id="w_SignIn">
+				完成
+			</div>
+		</form>
+	</section>
+	<script src="js/public/jquery-1.11.0.min.js"></script>
+	<script src="js/public/public.js"></script>
+	<script>
+		$("#modify").on("focus",function(){
+			$(".w_close").show();
+		})
+		$(".w_close").on("click",function(){
+			$("#modify").val("")
+			$(this).hide();
+		})
+		$("#w_SignIn").on("click",function(){
+			var modify = $("#modify").val();
+			var p = /(?!^\d+$)(?!^[a-zA-Z]+$)^[0-9a-zA-Z]{4,20}$/;/*  英文+数字  */
+
+			if(modify==""){
+				$("#confirm").show().html("名字不能为空");
+				$(".w_close").hide();
+			}else if(modify.length<4){
+				$("#confirm").show().html("名字不能小于4位");
+			}else if(modify.length>20){
+				$("#confirm").show().html("名字不能大于20位");
+			}else if(!(p.test(modify))){
+				$("#confirm").show().html("用户名由英文+数字组成");
+			}else{
+				alert(1111);
+			}
+		})
+	</script>
+</body>
+</html>

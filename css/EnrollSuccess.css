@@ -1,0 +1,43 @@
+.w_tallyBox{
+	width: 100%;
+	height: auto;
+	padding-top: 3rem;
+	color: #fff;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.4rem;
+}
+.w_tally{
+	width: 15%;
+	height: auto;
+	margin: 2rem auto 0 auto;
+}
+.w_tally img{
+	width: 100%;
+	height: 100%;
+}
+.w_modify{
+	width: auto;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.limitNUM11{
+	line-height: 2rem;
+}
+.w_rule{
+	color: #838280;
+	width: 100%;
+	padding: 2rem 0;
+	text-align: center;
+}
+.w_modifyBox{
+	margin: 5rem auto 0 auto;
+}
+/*input中placeholder颜色*/
+input::-webkit-input-placeholder { color: rgba(188,188,188,.8);text-indent: 1rem; } /* WebKit browsers */
+input:-moz-placeholder { color: rgba(188,188,188,.8);text-indent: 1rem; } /* Mozilla Firefox 4 to 18 */ 
+input::-moz-placeholder {  color: rgba(188,188,188,.8);text-indent: 1rem; } /* Mozilla Firefox 19+ */
+input:-ms-input-placeholder { color: rgba(188,188,188,.8);text-indent: 1rem; }/* Internet Explorer 10+ */ 
+.w_complete{
+	margin-top: 5rem;
+}

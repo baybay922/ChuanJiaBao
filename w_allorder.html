@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />    
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>编辑地址</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/allorder.css">
+	<style>
+		#box{
+			width:100%;
+			height:100%;
+			background:rgba(0,0,0,.7);
+			margin: 0 auto;
+			position: fixed;  
+			z-index:11;  
+			top: 0;
+			left: 0;  
+		}
+		.inner h2 span{
+			color: #ffd800;
+		} 
+		.inner{
+			width:70%;
+		  	height:auto;
+		  	background: #fff;
+		  	margin:0 auto;
+		  	border-radius:10px;
+		   	position: absolute;
+		   	left: 50%;
+		   	z-index: 9999;
+		 }
+		.inner h2{
+			width:95%;
+		    border-bottom:1px #dfe5ea solid;
+		    margin:.5rem auto 0 auto;
+		    line-height:25px;
+		    font-size: 16px;
+		    font-weight: normal;
+		    text-align: center;
+		    color: #5a636d;
+		    padding: 1rem 0;
+		}
+		.inner p{ 
+			height: 50px;
+		    line-height: 50px;
+		    font-size: 20px;
+		    padding-left: 20px;
+		  }
+		.button{width:100%;height:3.5rem;text-align:center;display:-webkit-box;}
+		.button span{
+			 width: 50%;
+		     height:40px;
+		     text-decoration:none;
+		     display:block;
+		     line-height: 40px;
+		     text-align:center;
+		     color:#2e9af2;
+		     font-size:14px;
+		     font-weight:800;
+		     cursor:pointer;
+		    }
+		.button span:nth-child(1){
+			border-right: 1px #dfe5ea solid;
+		}
+		.inner #qr2{margin-left:120px;}
+
+		.mask{
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		top:0;
+		background:#000;
+		opacity:0.6;
+		filter:alpha(opacity=60);
+		z-index:10;
+		}
+	</style>
+</head>
+<body>
+	<section class="w_wrapper">
+		<ul class="headNav">
+			<li class="cur"><a href="javascript:;">待支付</a></li>
+			<li><a href="javascript:;">待发货</a></li>
+			<li><a href="javascript:;">待收货</a></li>
+			<li><a href="javascript:;">已完成</a></li>
+			<li><a href="javascript:;">已取消</a></li>
+		</ul>
+		<div class="orderList">
+			<div class="page page0 pay">
+				<ul class="pay_page pay_page0" id="pay">
+					<li>
+						<div class="w_title"><span class="identifier">订单编号：123456789</span><span class="stay_page">待支付</span></div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="background: #fff;">
+							<dl>
+								<dt></dt>
+								<dd class="reckon">
+									<div>共<span class="count">2</span>件商品</div>
+									<div><span class="count"><span class="total">合计：<i class="money">￥188888.00</i></span><span class="count">(含运费￥<span>8</span>.00)</span></span></div>
+									<div class="ViewDetails"><a href="#">查看订单</a></div>									
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="page page1 delivery">
+				<ul class="pay_page pay_page1" id="delivery">
+					<li>
+						<div class="w_title"><span class="identifier">订单编号：123456789</span><span class="stay_page">待发货</span></div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="background: #fff;">
+							<dl>
+								<dt></dt>
+								<dd class="reckon">
+									<div>共<span class="count">2</span>件商品</div>
+									<div><span class="count"><span class="total">合计：<i class="money">￥188888.00</i></span><span class="count">(含运费￥<span>8</span>.00)</span></span></div>
+									<div class="ViewDetails"><a href="#">查看订单</a></div>									
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="page page2 akeDelivery">
+				<ul class="pay_page pay_page2" id="akeDelivery">
+					<li>
+						<div class="w_title"><span class="identifier">订单编号：123456789</span><span class="stay_page">待收货</span></div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="background: #fff;">
+							<dl>
+								<dt></dt>
+								<dd class="reckon">
+									<div>共<span class="count">2</span>件商品</div>
+									<div><span class="count"><span class="total">合计：<i class="money">￥188888.00</i></span><span class="count">(含运费￥<span>8</span>.00)</span></span></div>
+									<div class="ViewDetails"><a href="#">查看订单</a></div>									
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="w_title"><span class="identifier">订单编号：123456789</span><span class="stay_page">待收货</span></div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="background: #fff;">
+							<dl>
+								<dt></dt>
+								<dd class="reckon">
+									<div>共<span class="count">2</span>件商品</div>
+									<div><span class="count"><span class="total">合计：<i class="money">￥188888.00</i></span><span class="count">(含运费￥<span>8</span>.00)</span></span></div>
+									<div class="ViewDetails"><a href="#">查看订单</a></div>									
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="page page3 complete">
+				<ul class="pay_page pay_page3" id="complete">
+					<li>
+						<div class="w_title"><span class="identifier">订单编号：123456789</span><span class="stay_page" style="color: #cd1b21;">已完成</span></div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="background: #fff;">
+							<dl>
+								<dt></dt>
+								<dd class="reckon">
+									<div>共<span class="count">2</span>件商品</div>
+									<div><span class="count"><span class="total">合计：<i class="money">￥188888.00</i></span><span class="count">(含运费￥<span>8</span>.00)</span></span></div>
+									<div class="ViewDetails"><a href="#">查看订单</a></div>									
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="page page4 cancel">
+				<ul class="pay_page pay_page4" id="cancel">
+					<li>
+						<div class="w_title"><span class="identifier">订单编号：123456789</span><span class="stay_page disappeared" style="color: #999999;">已取消</span></div>
+						<div class="minute" style="border-bottom: 3px solid #fff;">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute">
+							<dl>
+								<dt>
+									<img src="./images/img/1_r2_c1.gif" alt="">
+								</dt>
+								<dd>
+									<h2>杜翠楼 天然和田玉碧玉十八罗汉项链男女款手编 项链玉器玉石项链挂绳</h2>
+									<p class="explicit">天然和田玉碧玉祥和貔貅挂坠项链玉石玉器玉器玉装饰</p>
+									<p class="tariff"><span>￥888.00</span><span>x1</span></p>
+								</dd>
+							</dl>
+						</div>
+						<div class="minute" style="background: #fff;">
+							<dl>
+								<dt></dt>
+								<dd class="reckon">
+									<div>共<span class="count">2</span>件商品</div>
+									<div><span class="count"><span class="total">合计：<i class="money">￥188888.00</i></span><span class="count">(含运费￥<span>8</span>.00)</span></span></div>
+									<div class="ViewDetails"><a class="DeleteOrder" href="#" style="color: #333!important;margin-right: 1rem;border-color: #ddd;">删除订单</a><a href="#">查看订单</a></div>									
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<script src="js/public/jquery-1.11.0.min.js"></script>
+	<script src="js/public/public.js"></script>
+	<script src="js/dialog.js"></script>
+	<script src="js/allorder.js"></script>
+</body>
+</html>

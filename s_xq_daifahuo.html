@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" >
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" >
+<link rel="stylesheet" type="text/css" href="css/style.css" >
+<title>传佳宝-订单详情</title>
+</head>
+<html>
+<body class="ucenter_bg" style="height:100%;">
+	<div class="order_main">
+		<div class="order_title">
+			<p>
+				<span class="order_t_le">等待商家发货</span>
+				<span class="order_t_ri"><img src="./images/uicon/order_pic_3.png" /></span>
+			</p>
+			<div class="clear_0"></div>
+		</div>
+		<div class="order_address">
+			<p class="order_name">
+				<span class="o_name">财神爷</span>
+				<span class="o_phone">188****8888</span>
+			</p>
+			<p class="order_addr">
+				<i><img src="./images/uicon/order_address_icon.png" /></i>
+				<span>北京市朝阳区东二环光华路soho88层</span>
+			</p>
+			<div class="order_cline"><img src="./images/uicon/color_line.jpg" /></div>
+		</div>
+		<div class="order_list">
+			<div class="commodity_main" style="background:#F5F5F5;margin:0;">
+				<dl>
+					<dt>
+						<img src="./images/shop_cart/img_01.jpg" />
+					</dt>
+					<dd>
+						<p class="goods_title" style="padding-bottom: 2rem;">汇宝玉器和田玉祥和貔貅挂坠项链玉器装装项链玉器装</p>
+						<p class="goods_jiage">
+							<span class="goods_price"><font>￥</font>18888.00</span>
+							<span class="goods_num">X1</span>
+						</p>
+					</dd>
+				</dl>
+				<div class="clear_0"></div>
+			</div>
+			<div class="order_btn">
+				<a href="tel:1234567"><button>联系客服</button></a>
+			</div>
+			<p class="order_tips">如果您有退货换货等售后需要请点击联系客服</p>
+		</div>
+		<div class="order_payment">
+			<p class="order_payment_p1">
+				<span class="payment_p1_le">支付方式</span>
+				<span class="payment_p1_ri">网上支付</span>
+			</p>
+			<p class="order_payment_p2">
+				<span class="payment_p2_le">配送方式</span>
+				<span class="payment_p2_ri">商家派送</span>
+			</p>
+			<!-- <p class="order_payment_p3">配送时间：9:00-15:00</p> -->
+			<p class="order_payment_p4">商家还未进行发货，请耐心等待</p>
+			<div class="clear_0"></div>
+		</div>
+		<div class="order_goods_total">
+			<p class="goods_total_p1">
+				<span class="total_p1_le">商品总额</span>
+				<span class="total_p1_ri">￥<i id="mony1">188888.00</i></span>
+			</p>
+			<p class="goods_total_p2">
+				<span class="total_p2_le">优惠</span>
+				<span class="total_p2_ri">-￥<i id="mony2"></i></span>
+			</p>
+			<p class="goods_total_p3">
+				<span class="total_p3_zhekou">折扣</span>
+				<span>折扣促销<font>￥<i id="mony3">4.00</i></font></span>
+			</p>
+			<p class="goods_total_p4">
+				<span class="total_p4_le">减满</span>
+				<span>减满促销<font>￥<i id="mony4">2.00</i></font></span>
+			</p>
+			<p class="goods_total_p5">
+				<span class="total_p5_le">运费</span>
+				<span class="total_p5_ri">+￥<i id="mony5">18.00</i></span>
+			</p>
+			<p class="goods_total_p6" style="border-bottom:1px #eee solid;">
+				<span style="float:right;font-size:1.2rem;">实付款：<i id="mony6" style="color:#CD1B21;font-size:1.2rem;">￥18888.00</i></span>
+			</p>
+			<p class="goods_total_p6">
+				<span style="float:left;color:#999;">下单时间</span>
+				<span style="float:right;color:#999;">2016-05-25 21：25：45</span>
+			</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/public/public.js"></script>
+	<script>
+		$(function(){
+			var money1 = $("#mony1").html();
+			var money2 = $("#mony2").html();
+			var money3 = $("#mony3").html();
+			var money4 = $("#mony4").html();
+			var money5 = $("#mony5").html();
+			var money6 = $("#mony6").html();
+			
+			//优惠金额
+			$("#mony2").html((parseFloat( Math.floor(money3) + Math.floor(money4) )) + '.00');
+			//实际付款金额
+			$("#mony6").html((parseFloat( Math.floor(money1) - Math.floor(money3) - Math.floor(money4) + Math.floor(money5) )) + '.00');
+			
+		}) 
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />    
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<title>选择地址</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/ReceiptAddress.css">
+	<style>
+		#box{
+			width:100%;
+			height:100%;
+			background:rgba(0,0,0,.7);
+			margin: 0 auto;
+			position: fixed;  
+			z-index:11;  
+			top: 0;
+			left: 0;  
+		}
+		.inner h2 span{
+			color: #ffd800;
+		} 
+		.inner{
+			width:70%;
+		  	height:auto;
+		  	background: #fff;
+		  	margin:0 auto;
+		  	border-radius:10px;
+		   	position: absolute;
+		   	left: 50%;
+		 }
+		.inner h2{
+			width:95%;
+		    border-bottom:1px #dfe5ea solid;
+		    margin:.5rem auto 0 auto;
+		    line-height:25px;
+		    font-size: 16px;
+		    font-weight: normal;
+		    text-align: center;
+		    color: #5a636d;
+		    padding: 1rem 0;
+		}
+		.inner p{ 
+			height: 50px;
+		    line-height: 50px;
+		    font-size: 20px;
+		    padding-left: 20px;
+		  }
+		.button{width:100%;height:3.5rem;text-align:center;display:-webkit-box;}
+		.button span{
+			 width: 50%;
+		     height:40px;
+		     text-decoration:none;
+		     display:block;
+		     line-height: 40px;
+		     text-align:center;
+		     color:#2e9af2;
+		     font-size:14px;
+		     font-weight:800;
+		     cursor:pointer;
+		    }
+		.button span:nth-child(1){
+			border-right: 1px #dfe5ea solid;
+		}
+		.inner #qr2{margin-left:120px;}
+
+		.mask{
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		top:0;
+		background:#000;
+		opacity:0.6;
+		filter:alpha(opacity=60);
+		z-index:10;
+		}
+	</style>
+</head>
+<body>
+	<section class="w_wrapper">
+		<ul class="w_addlist">
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked" checked="checked"><label for="checked" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked2"><label for="checked2" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked3"><label for="checked3" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked4"><label for="checked4" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked5"><label for="checked5" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked6"><label for="checked6" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked7"><label for="checked7" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked8"><label for="checked8" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked9"><label for="checked9" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked10"><label for="checked10" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dd>
+						<h2 class="w_Place">北京市朝阳区二环光华路SOHO11层</h2>
+						<div class="w_nameBox"><span class="w_name" id="w_name">郭大爷</span><span class="w_phone" id="w_phone">15615661566</span></div>
+					</dd>
+					<dt>
+						<div class="w_title"><input type="radio" name="checked" class="checkBox" id="checked11"><label for="checked11" class="checked">默认地址</label></div><div class="w_defBox"><span class="w_edit">编辑</span><span class="w_remove">删除</span></div>
+					</dt>
+				</dl>
+			</li>
+		</ul>
+		<div class="btnBox">
+			<a href="#" class="w_newAdd">+添加新地址</a>
+		</div>
+		<div class="no_data">
+			<img src="images/img/no_data.png" alt="">
+			<p>还没有收货地址</p>
+		</div>
+	</section>
+	<script src="js/public/jquery-1.11.0.min.js"></script>
+	<script src="js/public/public.js"></script>
+	<script src="js/dialog.js"></script>
+	<script>		
+		$(".w_remove").on("click",function(){
+			var ind = $(this).closest("li").index();
+			console.log(ind)
+
+			  $.dialog({
+			    isDisMask:false,
+			    title:"确定删除吗？",
+			    button:["确定","取消"],
+			    ind :ind
+			 })
+
+			var ClickAdd_len = $(".w_addlist").find("li").length;						
+			if(ClickAdd_len==0){
+				$(".no_data").show();
+				$(".w_newAdd").addClass("w_nodataAdd");
+			}
+			$(".w_addlist li:first").attr("checked","checked")
+		})
+		var Add_len = $(".w_addlist").find("li").length;
+		if(Add_len==0){
+			$(".no_data").show();
+			$(".w_newAdd").addClass("w_nodataAdd");
+		}
+		/*$(".w_edit").on("click",function(){
+			var add = $(this).closest("li").find("h2.w_Place").text(),
+				name = $(this).closest("li").find("span.w_name").text(),
+				phone = $(this).closest("li").find("span.w_phone").text();
+			window.location.href="EditAddress.html?add="+add+"&name="+name+"&phone="+phone;
+		})*/
+	</script>
+</body>
+</html>

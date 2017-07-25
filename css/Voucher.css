@@ -1,0 +1,34 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background: #ebeef2;overflow: hidden;}
+header{width: 100%;height: auto;}
+header>ul{width: 100%;height: 3rem;border-bottom: solid 1px #dfe5ea;background: #fff;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+header>ul>li{width: 33.3%;height:3rem;float: left;}
+header>ul>li>p{width:6rem;height:-webkit-calc(3rem - 3px);height:-moz-calc(3rem - 3px);height:-o-calc(3rem - 3px);height:-ms-calc(3rem - 3px);height:calc(3rem - 3px);font-size: 1rem;line-height: 3rem;margin:0 auto;text-align: center;}
+.l_focus{color: #cd1b21;font-weight: bold;border-bottom: solid 2px #cd1b21;}
+section{width: 100%;height: -webkit-calc(100% - 3rem);height: -moz-calc(100% - 3rem);height: -o-calc(100% - 3rem);height: -ms-calc(100% - 3rem);height: -calc(100% - 3rem);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding-top: 1rem;}
+section>ul{width: 100%;height: auto;}
+section>ul>li{width: 90%;height: 6rem;margin-left: 5%;border-radius: 6px;background: url(../images/Voucher_Img_01.png) 0 0 repeat-x #fff;background-size: 1.5rem;padding: 2rem 0 .5rem 0;margin-top: 1rem;position: relative;}
+section>ul>li::before,section>ul>li::after{content: "";position: absolute;border:none;border-radius:100%;border-right: solid 1.5rem #ebeef2;border-top: solid 1.5rem #ebeef2;top: 50%;margin-top: -.75rem;}
+section>ul>li::before{left: -1rem;}
+section>ul>li::after{right: -1rem;}
+section>ul>li>p{width: 100%;overflow: hidden;position: relative;}
+section>ul>li>p>span{position: absolute;}
+section>ul>li>p>span:nth-child(1){width: 40%;height: 4rem;font-size: 3rem;line-height: 5rem;font-weight: 800;color: #cd1b21;top: 0;left: 8%;text-indent: 1rem;letter-spacing: -0.2rem;}
+section>ul>li>p>span:nth-child(2){width: 35%;height: 2rem;font-size: 1.2rem;line-height: 1.5rem;color: #333;top: 0;right: 15%;text-align: center;}
+section>ul>li>p>span:nth-child(2)::after{content:"";width: 4px;height: 4px;background:#e4e4e4;position: absolute;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);bottom: -2px;left: 50%; margin-left: -2px;}
+section>ul>li>p>span:nth-child(3){width: 35%;height: 2rem;font-size: 1.2rem;line-height: 2.5rem;color: #333;bottom: 0;right: 15%;text-align: center;border-top:solid 1px #e4e4e4;}
+section>ul>li>p>span:nth-child(1)::before{content: "代金券";position: absolute;top: 0;left: -1rem;font-size: 1.2rem;line-height: 1;text-indent: 0;letter-spacing: 0rem;}
+section>ul>li>p>span:nth-child(1)::after{content: "￥";position: absolute;bottom: 0;left: -0.2rem;font-size: 1.6rem;line-height: 2.6rem;text-indent: 0;letter-spacing: 0rem;}
+section>ul>li>p:nth-child(1){height: 4rem;}
+section>ul>li>p:nth-child(2){height: 2rem;background: url(../images/Voucher_Img_03.png) 0 6px repeat-x;position: relative;}
+section>ul>li>p:nth-child(2)>i{width: 11rem;font-size: 1rem;color: #8b959c;position: absolute;top:50%;left: 67.5%;margin-left: -5.5rem;}
+.l_usedList{display: none;}
+.l_usedList>li{color: #c7c7c7!important;background: url(../images/Voucher_Img_02.png) 0 0 repeat-x #fff;background-size: 1.5rem;}
+.l_usedList>li>p>span:nth-child(1){color: #c7c7c7!important;}
+.l_usedList>li>p>span:nth-child(2),.l_usedList>li>p>span:nth-child(3){color: #8b959c!important;}
+section ul img{width: 30%;display: block;margin: 4rem auto 2rem;}
+section ul b{width: 100%;font-size: 1.4rem;line-height: 3rem;color: #818e9f;text-align:center;display: block;font-weight: normal;}
+section ul button{width: 40%;height: 3rem;border: solid 1px #cd1b21;color: #cd1b21;font-size: 1.6rem;margin-left: 30%;background: transparent;margin-top: 7rem;border-radius: 4px;}
+
+
